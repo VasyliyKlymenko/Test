@@ -23,7 +23,7 @@ class CallsPageController
     /**
      * Get calls report based on calls history
      * @return void
-     * @throws \Exception
+     * @throws Exception
      */
     public static function getReport(): void
     {
