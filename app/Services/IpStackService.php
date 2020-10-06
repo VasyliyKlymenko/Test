@@ -15,13 +15,13 @@ class IpStackService implements IpContinentServiceInterface
     /**
      * @var HttpClientInterface $httpClient
      */
-    private $httpClient;
+    private HttpClientInterface $httpClient;
 
     /**
      * Request parameters
      * @var array
      */
-    private $requestParameters;
+    private array $requestParameters;
 
     /**
      * IpStackService constructor.
@@ -47,7 +47,7 @@ class IpStackService implements IpContinentServiceInterface
             ];
 
             return $this->handleRequest($ip, $requestParameters)->continent_code;
-        } catch (\Exception $e) {
+        } catch (Exception $e) {
             return null;
         }
     }
@@ -74,7 +74,7 @@ class IpStackService implements IpContinentServiceInterface
      * @param string $ip
      * @param array|null $requestParameters
      * @return object // API response
-     * @throws \Exception
+     * @throws Exception
      */
     private function handleRequest(string $ip, ?array $requestParameters = []): object
     {

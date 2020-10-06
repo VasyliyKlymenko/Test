@@ -12,14 +12,14 @@ class BasePageController
     /**
      * @var string
      */
-    protected $baseViewsPath = '../views/';
+    protected string $baseViewsPath = '../views/';
 
     /**
      * Render view
      * @param string $viewPath
      * @param array|null $data
      */
-    protected function render(string $viewPath, ?array $data)
+    protected function render(string $viewPath, ?array $data = [])
     {
         include($this->baseViewsPath . $viewPath);
     }

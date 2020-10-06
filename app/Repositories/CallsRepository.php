@@ -81,7 +81,7 @@ class CallsRepository
      * @param $callsHistoryUploadedFile
      * @throws Exception
      */
-    public function validateCallsHistoryUploadedFile($callsHistoryUploadedFile)
+    public function validateCallsHistoryUploadedFile($callsHistoryUploadedFile): void
     {
         $fileExtension = pathinfo($callsHistoryUploadedFile['name'], PATHINFO_EXTENSION);
 

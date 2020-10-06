@@ -16,7 +16,7 @@ class GuzzleHttpClient implements HttpClientInterface
      * The GuzzleHttp client
      * @var Client $client
      */
-    private $guzzle;
+    private Client $guzzle;
 
     /**
      * @param array|null $config // Guzzle HTTP configuration options

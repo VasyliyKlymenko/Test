@@ -19,12 +19,12 @@ class PhoneContinentService
      *
      * @var array
      */
-    private $continentPhoneCodes = [];
+    private array $continentPhoneCodes = [];
 
     /**
      * @var string
      */
-    private $countryInfoFilePath = '../storage/countryInfo.txt';
+    private string $countryInfoFilePath = '../storage/countryInfo.txt';
 
     public function __construct()
     {

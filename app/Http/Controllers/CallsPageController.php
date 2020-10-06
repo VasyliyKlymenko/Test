@@ -28,8 +28,14 @@ class CallsPageController extends BasePageController
      */
     public function getReport(): void
     {
+        // TODO: Needs real request validation
+        $uploadedFiles = $_FILES;
+        if(!array_key_exists('file', $uploadedFiles) || !file_exists($uploadedFiles['file']['tmp_name'])) {
+            throw new Exception('The file must be uploaded.');
+        }
+
         $callsRepository = new CallsRepository();
-        $callsReportData = $callsRepository->getCallsReportData($_FILES['file']);
+        $callsReportData = $callsRepository->getCallsReportData($uploadedFiles['file']);
 
         $this->render('calls/report.php', ['callsReportData' => $callsReportData]);
     }
