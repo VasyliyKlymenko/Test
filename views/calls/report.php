@@ -13,7 +13,7 @@
         <th>Total number of all calls</th>
         <th>The total duration of all calls</th>
     </tr>
-    <?php foreach ($callsReportData as $customerId => $customerReportData) { ?>
+    <?php foreach ($data['callsReportData'] as $customerId => $customerReportData) { ?>
         <tr>
             <td><?= $customerId ?></td>
             <td><?= $customerReportData["sameContinentNumber"] ?></td>

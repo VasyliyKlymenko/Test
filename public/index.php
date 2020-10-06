@@ -8,10 +8,10 @@ use App\Http\Controllers\CallsPageController;
 try {
     switch (strtok($_SERVER["REQUEST_URI"],'?')) {
         case '/':
-            CallsPageController::getHistoryUploadForm();
+            (new CallsPageController)->getHistoryUploadForm();
             break;
         case '/get-calls-report':
-            CallsPageController::getReport();
+            (new CallsPageController)->getReport();
             break;
         default:
             echo '404';

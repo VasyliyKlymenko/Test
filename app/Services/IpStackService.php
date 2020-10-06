@@ -56,7 +56,7 @@ class IpStackService implements IpContinentServiceInterface
      * @param array|null $requestParameters
      * @throws Exception
      */
-    private function setBaseRequestParameters(?array $requestParameters = [])
+    private function setBaseRequestParameters(?array $requestParameters = []): void
     {
         $apiAccessKey = Config::get('IPSTACK_ACCESS_KEY');
 

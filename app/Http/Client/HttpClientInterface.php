@@ -28,6 +28,6 @@ interface HttpClientInterface
      *
      * @throws Exception
      */
-    public function handleRequest(string $method, ?string $uri = '', ?array $options = [], ?array $parameters = [], ?bool $returnAssoc = false);
+    public function handleRequest(string $method, ?string $uri = '', ?array $options = [], ?array $parameters = [], ?bool $returnAssoc = false): object;
 
 }
